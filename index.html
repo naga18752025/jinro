@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人狼ゲーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>人狼ゲーム</h1>
+
+    <div id="setup">
+      <label>人数を選んでください：
+        <input type="number" id="playerCount" min="4" max="8" value="5" />
+      </label>
+      <button onclick="startGame()">ゲーム開始</button>
+    </div>
+
+    <div id="roleReveal" class="hidden">
+      <p id="playerLabel"></p>
+      <div id="roleCard"></div>
+      <button onclick="nextPlayer()">次のプレイヤーへ</button>
+    </div>
+
+    <div id="allDone" class="hidden">
+      <p>全員に役職が配られました！</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
